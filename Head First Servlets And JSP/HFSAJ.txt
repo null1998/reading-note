@@ -1,0 +1,52 @@
+第一章
+名词及相关注意事项：
+1、HTTP
+如果你是一个Web服务器，就必须讲HTTP。
+Web服务器仅提供静态页面，故它需要一个辅助应用———CGI/Servlet。
+HTTP的一个非常简单的解释P10。
+HTTP方法 GET POST 请求P15 响应P17，几乎不用的HEAD TRACE PUT DELETE OPTIONS CONNECT。
+2、HTML
+<img>标记会生成另一个HTTP请求。
+3、URL
+简单解释URL P20。
+4、TCP
+TCP端口小科普 P21。
+
+第二章
+5、Web容器
+Servlet没有main()方法，其受控于Web容器，如Tomcat P39。
+容器利用它强大的功能，运行和管理Servlet P41。
+容器对请求的处理，必看 P42。
+6、部署描述文件
+URL映射、安全角色、错误页面、标记库、初始配置信息、声明将要访问的特定企业Javabean。
+一个小问题：Servlet太笨拙。
+7、JavaEE应用服务器
+简单介绍JavaEE应用服务器，以及它和Tomcat的联系 P65。
+
+第四章
+8、Servlet继承树
+列出了三个抽象类的各个方法 P98。
+生命周期 P99
+注意容器是运行多个线程来运行对一个Servlet的多个请求（当然数量有限），然后创建多对请求响应对象并调用sevice()。
+注意在一个JMV上只有特定Servlet的一个实例。
+9、Servlet的初始化细节
+注意不要在Servlet里放任何东西，init()则相反。
+让一个普通对象升级为Servlet的两个对象：ServletConfig和ServletContext。
+10、HttpServletRequest和HttpServletResponse接口
+该接口的继承树 P106 还有个getParameterValues()、getInputStream()
+11、幂等
+重复地做同一件事，不会发生不可预料的事。Get是幂等，Post不是。如果客户错误执行多次,该如何
+12、P123 三个端口小细节.
+13、简单地传回一个jar文件 P123
+14、重定向中使用相对地址，两种 P136
+
+第五章
+15、有状态会话的企业Javabean
+16、容器如何知道客户是谁？ P230
+首先Http是无状态连接，对容器而言每一个请求都来自于一个新客户。
+17、如果用户禁用cookie该如何 P237
+这意味着Set-Cookie会被忽略，每次的会话都是新的，解决方法：URL重写（必须对动态网页使用）
+
+
+
+
